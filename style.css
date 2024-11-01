@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('https://example.com/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.description, .comments {
+    display: flex;
+    align-items: center;
+}
+
+.description img {
+    width: 250px;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.text h1 {
+    font-size: 2.5em;
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.player iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    color: #e5e5e5;
+}
+
+select, input[type="range"] {
+    padding: 5px;
+    background: #333;
+    color: #e5e5e5;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+button {
+    background: #e50914;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(229, 9, 20, 0.3);
+}
+
+button:hover {
+    background: #f40612;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(229, 9, 20, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(229, 9, 20, 0.2);
+}
+
+.recommendations img {
+    width: 100px;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.recommendations img:hover {
+    transform: scale(1.1);
+}
+
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    margin-top: 10px;
+    height: 80px;
+    font-size: 1em;
+}
+    
