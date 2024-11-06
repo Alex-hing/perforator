@@ -4,35 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrangeYouTube</title>
+    <title>IMDb</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-left">
-            <div class="logo">
-                <img src="https://cdn-icons-png.flaticon.com/512/889/889199.png" alt="IMDb Logo">
-            </div>
-            <button class="menu-btn">Menu</button>
+    <header>
+        <button class="menu-button" id="menu-button">Menu</button>
+        <div class="logo">
+            <a href="#"><img src="images/logo.png" alt="IMDb Logo"></a>
         </div>
         <div class="search-bar">
-            <select>
-                <option value="all">All</option>
-            </select>
-            <input type="text" placeholder="Search IMDb">
-            <button class="search-btn">&#128269;</button>
+            <div class="search-category-dropdown">
+                <button class="dropdown-button">All ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">All</a>
+                    <a href="#">Titles</a>
+                    <a href="#">TV Episodes</a>
+                    <a href="#">Celebs</a>
+                    <a href="#">Companies</a>
+                    <a href="#">Keywords</a>
+                    <a href="#">Advanced Search</a>
+                </div>
+            </div>
+            <input type="text" id="search-input" placeholder="Search IMDb">
+            <button type="submit" class="search-icon" onclick="performSearch()">
+                🔍
+            </button>
         </div>
-        <div class="navbar-right">
-            <a href="#" class="navbar-link"><img
-                    src="https://www.pngkit.com/png/full/193-1934837_imdb-imdb-app-logo-png-imdb-pro-logo.png" alt="IMDbPRO Logo" width="70"></a>
-            <a href="#" class="navbar-link">Watchlist</a>
-            <a href="#" class="navbar-link">Sign In</a>
-            <select class="lang-select">
-                <option value="en">EN</option>
-            </select>
+        <div class="header-links">
+            <a href="#" class="header-link" id="imdb-pro-link">IMDbPro</a>
+            <a href="#" class="header-link" id="watchlist-link">Watchlist</a>
+            <a href="#" class="header-link" id="sign-in-link">Sign In</a>
+            <div class="lang-dropdown">
+                <button class="lang-button">EN ▼</button>
+                <div class="lang-content">
+                    <a href="#" onclick="setLanguage('en')">EN</a>
+                    <a href="#" onclick="setLanguage('ua')">UA</a>
+                </div>
+            </div>
         </div>
-    </nav>
+    </header>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
