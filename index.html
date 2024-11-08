@@ -45,7 +45,91 @@
             </div>
         </div>
     </header>
-
+    <main>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film1')">
+                    <img src="images/twddds.png" alt="video image 1">
+                    <div class="carousel-content">
+                        <h3>"The Walking Dead: Daryl Dixon" Season 3</h3>
+                        <p>Watch the Teaser</p>
+                        <div class="engagement">
+                            <span>👍 72</span>
+                            <span>💖 58</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">0:31</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film2')">
+                    <img src="images/theend.png" alt="video image 2">
+                    <div class="carousel-content">
+                        <h3>Joshua Oppenheimer's 'The End'</h3>
+                        <p>Watch the Trailer</p>
+                        <div class="engagement">
+                            <span>👍 26</span>
+                            <span>💖 16</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">2:25</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film3')">
+                    <img src="images/stranger.png" alt="video image 3">
+                    <div class="carousel-content">
+                        <h3>Every Episode Title for Season 5</h3>
+                        <p>Watch the Teaser</p>
+                        <div class="engagement">
+                            <span>👍 614</span>
+                            <span>💖 307</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">0:53</span>
+                </div>
+                <!-- тут треба додати ще 12 слайдів -->
+                <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+                <button class="carousel-control next" onclick="nextSlide()">❯</button>
+            </div>
+            <div class="up-next">
+                <h3 class="yellow-text">Up next</h3>
+                <div class="next-video" onclick="goToFilm('#')">
+                    <img src="images/twddds2.png" alt="Next Video 1">
+                    <div class="video-info">
+                        <span class="video-time">0:31</span>
+                        <h4>"The Walking Dead: Daryl Dixon" Season 3</h4>
+                        <p>"Watch the Teaser</p>
+                        <div class="engagement">
+                            <span>👍 72</span>
+                            <span>💖 58</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-video" onclick="goToFilm('#')">
+                    <img src="images/theend2.png" alt="Next Video 2">
+                    <div class="video-info">
+                        <span class="video-time">2:25</span>
+                        <h4>Joshua Oppenheimer's 'The End'</h4>
+                        <p>Watch the Trailer</p>
+                        <div class="engagement">
+                            <span>👍 26</span>
+                            <span>💖 16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-video" onclick="goToFilm('#')">
+                    <img src="images/stranger2.png" alt="Next Video 2">
+                    <div class="video-info">
+                        <span class="video-time">0:53</span>
+                        <h4>Every Episode Title for Season 5</h4>
+                        <p>Watch the Teaser</p>
+                        <div class="engagement">
+                            <span>👍 614</span>
+                            <span>💖 307</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="yellow-text">Browse trailers ➔</a>
+            </div>
+        </div>
+    </main>
     <script src="index.js"></script>
 </body>
 

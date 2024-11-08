@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #1c1c1c;
+  background-color: #000000;
   color: white;
 }
 
@@ -183,5 +183,110 @@ header {
 }
 
 .lang-dropdown:hover .lang-content {
+  display: block;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.carousel {
+  position: relative;
+  width: 800px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.engagement {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-time {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.up-next {
+  max-width: 300px;
+  background-color: #121212;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+}
+
+.next-video {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.next-video img {
+  width: 60px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.yellow-text {
+  color: yellow;
+  text-decoration: none;
+  margin: 10px;
   display: block;
 }
