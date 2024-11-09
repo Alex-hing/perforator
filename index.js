@@ -130,4 +130,6 @@ function goToFilm(url) {
     window.location.href = url
 }
 
+setInterval(nextSlide, 5000)
+
 showSlide(currentSlide)
