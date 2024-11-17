@@ -1,0 +1,74 @@
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.sign-in-button {
+    background-color: #f5c518;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.social-media, .app-download {
+    text-align: center;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+
+.app-download img {
+    width: 80px;
+    margin-top: 5px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #aaa;
+}
+
+.footer-bottom {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-bottom .amazon {
+    color: #f5c518;
+}
