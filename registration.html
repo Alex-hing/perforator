@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="registration.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="#"><img src="images/logo.svg" alt="logo"></a>
+    </nav>
+    <div class="form-wrapper">
+        <h2>Увійти</h2>
+        <form action="#" onsubmit="redirectToMain(event)"></form>
+        <form action="#">
+            <div class="form-control">
+                <input type="text" required>
+                <label>Електронна пошта або номер телефону</label>
+            </div>
+            <div class="form-control">
+                <input type="password" required>
+                <label>Пароль</label>
+            </div>
+            <button type="submit">Увійти</button>
+            <div class="form-help"> 
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">пам'ятай мене</label>
+                </div>
+                <a href="#">Потрібна допомога?</a>
+            </div>
+        </form>
+        <p>Вперше користуєтеся Netflix? <a href="#">Зареєструйтесь зараз</a></p>
+        <small>
+            Ця сторінка захищена Google reCAPTCHA, щоб гарантувати, що ви не бот. 
+            <a href="#">Дізнайтесь більше.</a>
+        </small>
+    </div>
+</body>
+</html>
