@@ -1,0 +1,220 @@
+
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бібліотека фільмів</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #121212;
+            color: #ffffff;
+            gap: 20px;
+        }
+
+        .menu-button {
+            background-color: #121212;
+            color: #ccc;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: 0.2s;
+        }
+
+        .menu-button:hover {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 10px;
+            color: #f5c518;
+        }
+
+        .menu-button:active {
+            transform: scale(0.9);
+        }
+
+        .logo img {
+            width: 60px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            max-width: 600px;
+            width: 100%;
+            background-color: #222;
+            border: 1px solid #333;
+            padding: 5px;
+            border-radius: 4px;
+            gap: 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .movie-card {
+            background-color: #222;
+            border: 1px solid #333;
+            border-radius: 8px;
+            width: 200px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .movie-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #f5c518;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Логотип">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Пошук фільму..." style="flex: 1; padding: 10px; border: none; background: transparent; color: white;">
+        </div>
+    </header>
+
+<main>
+    <div class="movie-list" id="movieList">
+        <div class="movie-card">
+            <img src="https://uaserials.pro/posters/3723.jpg" alt="Project X">
+            <h3>Project X</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://fr.web.img6.acsta.net/c_310_420/img/dc/5e/dc5e71f5a015d5d24f0135ee600ac27b.jpg" alt="Substance">
+            <h3>Substance</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/6gqQgt6bJuJyTGkzCnghWL0sNMQ=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9991602_p_v13_ah.jpg" alt="The Wolf of Wall Street">
+            <h3>The Wolf of Wall Street</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/pLEJGnAJ6581w2D1JwLr_7srp4U=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p15684_p_v8_ai.jpg" alt="Pulp Fiction">
+            <h3>Pulp Fiction</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://www.kinofilms.ua/images/movies/big/68001_ua.jpg" alt="He’s Back">
+            <h3>He’s Back</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/QwO-nRLkBjU8-BlAz7xHdvUvalE=/206x305/v2/https://resizing.flixster.com/PgHhmCKS3hR6GUsVNlC-vZ9d90I=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzZhOTA0OTIzLTEwNDctNDhkNS1iNTc3LTY3MjBmNDc5OGU1Mi5qcGc=" alt="Dune 2">
+            <h3>Dune 2</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/H_01DJwgqQtq3M9GLavrM9_FL3g=/206x305/v2/https://resizing.flixster.com/c7fcjCvkHP4wiDlEdVRusMXCOws=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzAzOWI1YzkwLTNiODAtNDNmYy05MTA1LTViZjg4ZTgyYTc1MC5qcGc=" alt="The Wild Robot">
+            <h3>The Wild Robot</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://uaserials.pro/posters/2064.jpg" alt="Gladiator">
+            <h3>Gladiator</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/OBCMbeYEWS5tI2QhErFskxKyEa0=/206x305/v2/https://resizing.flixster.com/mPJp85eApHd8ih9XF5E9d3-2LbM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzUxODlkZDE1LTQyYjUtNDg5ZS05NjZmLWMxZDk1YWZhN2E1ZC5qcGc=" alt="Deadpool and Wolverine">
+            <h3>Deadpool and Wolverine</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/-Y1UtiBmMYjgeeMfWUSIDq6dej4=/206x305/v2/https://resizing.flixster.com/9ROAHiR8ML6DU3j7yfWypNy2NxU=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzYwZGZhODY3LTI2YzktNGVkYy05YWJlLTVmMGNmMTY2YWZhNS5qcGc=" alt="Venom 2">
+            <h3>Venom 2</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://www.kinofilms.ua/images/movies/big/42014_ua.jpg" alt="The Intouchables">
+            <h3>The Intouchables</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://www.kinofilms.ua/images/movies/big/3913_ua.jpg" alt="Alvin and the Chipmunks">
+            <h3>Alvin and the Chipmunks</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/fHUZr99k4HWii_jJwo4cA4v0Bb8=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p8992211_p_v8_bh.jpg" alt="The Hobbit: An Unexpected Journey">
+            <h3>The Hobbit: An Unexpected Journey</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://uaserials.pro/posters/4104.jpg" alt="King Kong">
+            <h3>King Kong</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/8HoNaz27x5oF49u3qxfUC75BTSI=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p159800_p_v8_aj.jpg" alt="The Devil Wears Prada">
+            <h3>The Devil Wears Prada</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/2yTtbYaljlzWgEhOCUTrH55jjfM=/206x305/v2/https://resizing.flixster.com/fC7nU6iTRQk02tS0SDS1ylx-G34=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2QxZjE5ZDgzLTRiY2MtNDFkYS04NWQ4LTRkYzc1ZTAwNWE2NC53ZWJw" alt="Avengers: Endgame">
+            <h3>Avengers: Endgame</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/d1_WH-Gm_LJGiW5prh_7gOcNbw8=/206x305/v2/https://resizing.flixster.com/it09fzoxXeMezvZpRcrajvy-X3A=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA3NTEzOWU0LThkYWQtNDI3Mi05ZThjLWVlMzdhMDc4ZDMzNi53ZWJw" alt="Jumanji: Welcome to the Jungle">
+            <h3>Jumanji: Welcome to the Jungle</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/EK_RgLRjKw2kswgCiNfCSCjxH-s=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10086642_p_v13_bf.jpg" alt="Maleficent">
+            <h3>Maleficent</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/_Kn0xpnlO2DJt_CvKIEddywD89c=/206x305/v2/https://resizing.flixster.com/JK6oR_ocrhYq1fFi1fTmVhdDtR4=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzg3NGEwM2NkLTI2N2QtNDk4ZS05OGY5LWU0MmQ5NzAyZGJmMC53ZWJw" alt="Deadpool">
+            <h3>Deadpool</h3>
+        </div>
+        <div class="movie-card">
+            <img src="https://resizing.flixster.com/laUqJaE4fygZ-Xia_N47GHXSsco=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p8494407_p_v10_ak.jpg" alt="Insidious">
+            <h3>Insidious</h3>
+        </div>
+    </div>
+</main>
+
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const movieList = document.getElementById('movieList');
+        const movies = Array.from(movieList.getElementsByClassName('movie-card'));
+
+        searchInput.addEventListener('input', function () {
+            const searchQuery = searchInput.value.toLowerCase();
+            movies.forEach(movie => {
+                const title = movie.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchQuery)) {
+                    movie.style.display = 'block';
+                } else {
+                    movie.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
