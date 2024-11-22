@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <button class="menu-button" id="menu-button">Menu</button>
+        <div class="logo">
+            <a href="#"><img src="images/logo.png" alt="IMDb Logo"></a>
+        </div>
+        <div class="search-bar">
+            <div class="search-category-dropdown">
+                <button class="dropdown-button">All ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">All</a>
+                    <a href="#">Titles</a>
+                    <a href="#">TV Episodes</a>
+                    <a href="#">Celebs</a>
+                    <a href="#">Companies</a>
+                    <a href="#">Keywords</a>
+                    <a href="#">Advanced Search</a>
+                </div>
+            </div>
+            <input type="text" id="search-input" placeholder="Search IMDb">
+            <button type="submit" class="search-icon" onclick="performSearch()">
+                🔍
+            </button>
+        </div>
+        <div class="header-links">
+            <a href="#" class="header-link" id="imdb-pro-link">IMDbPro</a>
+            <a href="#" class="header-link" id="watchlist-link">Watchlist</a>
+            <a href="#" class="header-link" id="sign-in-link">Sign In</a>
+            <div class="lang-dropdown">
+                <button class="lang-button">EN ▼</button>
+                <div class="lang-content">
+                    <a href="#" onclick="setLanguage('en')">EN</a>
+                    <a href="#" onclick="setLanguage('ua')">UA</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide active" onclick="goToFilm('Video/GTA 5.mp4')">
+                    <img src="images/twddds.png" alt="video image 1">
+                    <div class="carousel-content">
+                        <h3>"The Walking Dead: Daryl Dixon" Season 3</h3>
+                        <p>Watch the Teaser</p>
+                        <div class="engagement">
+                            <span>👍 72</span>
+                            <span>💖 58</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">0:31</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film2')">
+                    <img src="images/theend.png" alt="video image 2">
+                    <div class="carousel-content">
+                        <h3>Joshua Oppenheimer's 'The End'</h3>
+                        <p>Watch the Trailer</p>
+                        <div class="engagement">
+                            <span>👍 26</span>
+                            <span>💖 16</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">2:25</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film3')">
+                    <img src="images/stranger.png" alt="video image 3">
+                    <div class="carousel-content">
+                        <h3>Every Episode Title for Season 5</h3>
+                        <p>Watch the Teaser</p>
+                        <div class="engagement">
+                            <span>👍 614</span>
+                            <span>💖 307</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">0:53</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film4')">
+                    <img src="images/capamer.png" alt="video images 4 ">
+                    <div class="carousel-content">
+                        <h3>Captain America: Brave New World</h3>
+                        <p> Watch the New Trailer from D23 Brazil</p>
+                        <div class="engagement">
+                            <span>👍 508</span>
+                            <span>💖 256</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">2:38</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film5')">
+                    <img src="images/y2k.png" alt="video image 5">
+                    <div class="carousel-content">
+                        <h3>Chaos Reigns in 'Y2K'</h3>
+                        <p>Watch the Trailer</p>
+                        <div class="engagement">
+                            <span>👍 39</span>
+                            <span>💖 16</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">1:09</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film6')">
+                    <img src="images/mufasa.png" alt="video image 6">
+                    <div class="carousel-content">
+                        <h3>'Mufasa: The Lion King'</h3>
+                        <p>Watch the Prequel Trailer</p>
+                        <div class="engagement">
+                            <span>👍 250</span>
+                            <span>💖 158</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">2:24</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film7')">
+                    <img src="images/mision.png" alt="video image 8">
+                    <div class="carousel-content">
+                        <h3>'Mission: Impossible - The Final Reckoning'</h3>
+                        <p>Watch the First Teaser</p>
+                        <div class="engagement">
+                            <span>👍 1.4K</span>
+                            <span>💖 696</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">2:01</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film8')">
+                    <img src="images/tunder.png" alt="video image 7">
+                    <div class="carousel-content">
+                        <h3>'Thunderbolts*' Assemble!</h3>
+                        <p>Get a Closer Look at the Team</p>
+                        <div class="engagement">
+                            <span>👍 367</span>
+                            <span>💖 172</span>
+                        </div>
+                    </div>  
+                    <span class="carousel-time">3:41</span>
+                </div>
+                <div class="carousel-slide active" onclick="goToFilm('https://example.com/film9')">
+                    <img src="images/secret.png" alt="video image 9">
+                    <div class="carousel-content">
+                        <h3>"Secret Level"</h3>
+                        <p>Stories Inspired by Warhammer, SIFU, Exodus, and More!</p>
+                        <div class="engagement">
+                            <span>👍 58</span>
+                            <span>💖 28</span>
+                        </div>
+                    </div>
+                    <span class="carousel-time">2:42</span>
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+                <button class="carousel-control next" onclick="nextSlide()">❯</button>
+            </div>
+            <div class="up-next">
+                <h3 class="yellow-text">Up next</h3>
+                <div class="next-video" onclick="goToFilm('https://example.com/film1')">
+                    <img src="images/amateur.png" alt="Next Video 1">
+                    <div class="video-info">
+                        <span class="video-time">2:25</span>
+                        <h4>'The Amateur'</h4>
+                        <p>Watch the Trailer</p>
+                        <div class="engagement">
+                            <span>👍 105</span>
+                            <span>💖 45</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-video" onclick="goToFilm('https://example.com/film2')">
+                    <img src="images/redone.png" alt="Next Video 2">
+                    <div class="video-info">
+                        <span class="video-time">1:05</span>
+                        <h4>Can The Rock Save Santa?</h4>
+                        <p>Watch the 'Red One' Clip</p>
+                        <div class="engagement">
+                            <span>👍 5</span>
+                            <span>💖 1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-video" onclick="goToFilm('https://example.com/film3')">
+                    <img src="images/backinaction.png" alt="Next Video 3">
+                    <div class="video-info">
+                        <span class="video-time">1:22</span>
+                        <h4>Cameron Diaz and Jamie Foxx Are 'Back in Action'</h4>
+                        <p>Watch the Teaser</p>
+                        <div class="engagement">
+                            <span>👍 281</span>
+                            <span>💖 67</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="yellow-text">Browse trailers ➔</a>
+            </div>
+        </div>
+        <div class="featured-section">
+            <h2>Featured today</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="images/filmlist1.png" alt="D">
+                    <p>What to Watch in November</p>
+                    <a href="#">See IMDb staff picks</a>
+                </div>
+                <div class="card">
+                    <img src="images/filmlist2.png" alt="S">
+                    <p>15 Fall Movies You Need to Know About</p>
+                    <a href="#">Explore the movies</a>
+                </div>
+            </div>
+        </div>
+        <div class="celebrity-carousel">
+            <h2>Most popular celebrities</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" onclick="prevCelebrities()">❮</button>
+                <div class="carousel-content-two">
+                    <div class="celebrity-slide active">
+                        <div class="celebrity">
+                            <img src="images/DiCaprio.png" alt="Leonardo DiCaprio">
+                            <p>Leonardo DiCaprio</p>
+                            <p class="rank">49</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Pitt.png" alt="Brad Pitt">
+                            <p>Brad Pitt</p>
+                            <p class="rank">60</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Downey.png" alt="Robert Downey Jr.">
+                            <p>Robert Downey Jr.</p>
+                            <p class="rank">59</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Hemsworth.png" alt="Chris Hemsworth">
+                            <p>Chris Hemsworth</p>
+                            <p class="rank">41</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Cruise.png" alt="Tom Cruise">
+                            <p>Tom Cruise</p>
+                            <p class="rank">62</p>
+                        </div>
+                    </div>
+                    <div class="celebrity-slide">
+                        <div class="celebrity">
+                            <img src="images/Johansson.png" alt="Scarlett Johansson">
+                            <p>Scarlett Johansson</p>
+                            <p class="rank">39</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Robbie.png" alt="Margot Robbie">
+                            <p>Margot Robbie</p>
+                            <p class="rank">34</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Zendaya.png" alt="Zendaya">
+                            <p>Zendaya</p>
+                            <p class="rank">28</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Phoenix.png" alt="Joaquin Phoenix">
+                            <p>Joaquin Phoenix</p>
+                            <p class="rank">50</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Cavill.png" alt="Henry Cavill">
+                            <p>Henry Cavill</p>
+                            <p class="rank">41</p>
+                        </div>
+                    </div>
+                    <div class="celebrity-slide">
+                        <div class="celebrity">
+                            <img src="images/Washington.png" alt="Denzel Washington">
+                            <p>Denzel Washington</p>
+                            <p class="rank">69</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Lawrence.png" alt="Jennifer Lawrence">
+                            <p>Jennifer Lawrence</p>
+                            <p class="rank">34</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Bale.png" alt="Christian Bale">
+                            <p>Christian Bale</p>
+                            <p class="rank">50</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Chalamet.png" alt="Timothée Chalamet">
+                            <p>Timothée Chalamet</p>
+                            <p class="rank">28</p>
+                        </div>
+                        <div class="celebrity">
+                            <img src="images/Stone.png" alt="Emma Stone">
+                            <p>Emma Stone</p>
+                            <p class="rank">36</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="nextCelebrities()">❯</button>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
